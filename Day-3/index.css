@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f08080 ;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 100px;
+    height: 100px;
+    position: relative;
+   
+}
+
+.loader div{
+    position: absolute;
+   
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 20px #00000020;
+}
+
+.loader div:nth-child(1){
+    width: 100px;
+    height: 100px;
+    animation: circleAnim1 2s cubic-bezier(.52,.88,.57,.38) infinite alternate both;
+}
+
+.loader div:nth-child(2){
+    width: 70px;
+    height: 70px;
+    top: 15px;
+    left: 15px;
+    animation: circleAnim2 2s cubic-bezier(.52,.88,.57,.38) infinite alternate;
+}
+
+.loader div:nth-child(3){
+    width: 40px;
+    height: 40px;
+    top: 30px;
+    left: 30px;
+    animation: circleAnim3 2s cubic-bezier(.52,.88,.57,.38) infinite alternate both;
+}
+
+@keyframes circleAnim1{
+    0%, 20%{
+        transform: scale(0);
+        box-shadow: 2px 2px 20px;
+    }
+    100%{
+        transform: scale(1);
+        box-shadow: 4px 4px 40px #00000030 ;
+    }
+}
+
+@keyframes circleAnim2 {
+    0% ,50%{
+        transform: scale(0);
+        box-shadow: 2px 2px 20px #00000020;
+    }
+    100%{
+        transform: scale(1);
+        box-shadow: 4px 4px 40px #00000030;
+    }
+}
+
+@keyframes circleAnim3 {
+    0%, 70%{
+        transform: scale(0);
+        box-shadow: 2px 2px 20px #00000020;
+    }
+    100%{
+        transform: scale(1);
+        box-shadow: 4px 4px 40px #00000030;
+    }
+}
